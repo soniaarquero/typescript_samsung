@@ -6,97 +6,97 @@ import { Phone } from "./phone";
 let personas: Person[] = [];
 
 personas.push(new Person(
-    "Sonia",
-    "Arquero Cordero",
+    "Sofia",
+    "Rodriguez Peña",
     34,
-    "11855974A",
+    "8879974T",
     "03/11/1988",
-    "rosa",
+    "azul",
     "mujer",
     new Address(
-        "Plaza Marqués de Tolosa",
+        "Calle Aravaca",
         5,
-        0,
-        "0",
+        6,
+        "B",
         28909,
         "Getafe",
         "Madrid"
     ),
     new Mail(
         "Trabajo",
-        "lauragh@aytomadrid.es"
+        "srodriguez@gmail.es"
     ),
     new Phone(
         "Trabajo",
-        632009876
+        633003300
     ),
-    "Contactar únicamente de 8 a 16h"
+    "Solo disponible por las tardes"
 ));
 
 personas.push(new Person(
-    "Francisco",
-    "Hierro Jódar",
+    "Diego",
+    "Miguel Luna",
     25,
-    "25768901Z",
-    "05/08/1996",
-    "verde",
+    "3588744A",
+    "30/11/1997",
+    "rojo",
     "hombre",
     new Address(
-        "Plaza de la Concordia",
+        "Calle Cáceres",
         3,
         5,
         "Derecha",
         29005,
-        "Málaga",
-        "Málaga"
+        "Lugo",
+        "Lugo"
     ),
     new Mail(
         "Personal",
-        "franciscohierroj@gmail.com"
+        "diegomluna@hotmail.com"
     ),
     new Phone(
         "Casa",
-        951247590
+        984896520
     ),
     ""
 ));
 
 personas.push(new Person(
-    "Gabriela",
-    "Vargas Hughes",
-    67,
-    "89504321D",
-    "13/12/1954",
-    "morado",
-    "mujer",
+    "Roberto",
+    "Iglesias Montero",
+    54,
+    "87759667D",
+    "13/12/1969",
+    "negro",
+    "hombre",
     new Address(
-        "Avenida José Laguillo",
-        6,
+        "Avenida de América",
+        159,
         4,
         "A",
-        41003,
-        "Sevilla",
-        "Sevilla"
+        28024,
+        "Madrid",
+        "Madrid"
     ),
     new Mail(
         "Personal",
-        "gabrielitavargas@hotmail.com"
+        "riglemon@hotmail.com"
     ),
     new Phone(
         "Personal",
-        678521001
+        687666999
     ),
-    "Vacaciones en agosto"
+    "Insistir en la llamada"
 ));
 
-let personaFiltrada: Person = personas.filter(a => a.dni == "25768901Z")[0];
+let personaFiltrada: Person = personas.filter(a => a.dni == "87759667D")[0];
 
-let nuevaDireccion: Address = new Address("Calle Sombra", 98, 2, "I", 41987, "Sevilla", "Sevilla");
+let nuevaDireccion: Address = new Address("Calle Antigua", 3, 0, "0", 37001, "Salamanca", "Salamanca");
 
 personaFiltrada.direcciones.pop();
 personaFiltrada.direcciones.push(nuevaDireccion);
 
-let nuevoMail: Mail = new Mail("Trabajo","fhierroj@talent.org");
+let nuevoMail: Mail = new Mail("Trabajo","riglemon@aytosalamanca.org");
 
 personaFiltrada.mails.pop();
 personaFiltrada.mails.push(nuevoMail);
